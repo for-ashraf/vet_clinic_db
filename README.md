@@ -20,7 +20,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [@for-ashraf](https://github.com/for-ashraf)
 - LinkedIn: [Muhammad Ashraf](https://www.linkedin.com/in/for-ashraf/)
-- Twitter: [@twitterhandle](https://twitter.com/forashraf)
+- Twitter: [forashraf](https://twitter.com/forashraf)
 
 ## 🤝 Contributing
 
@@ -31,12 +31,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
