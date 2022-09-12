@@ -18,3 +18,13 @@ insert into animals (id,name,date_of_birth,escape_attempts, neutered, weight_kg)
 insert into animals (id,name,date_of_birth,escape_attempts, neutered, weight_kg) values (11,'Ditto','05-14-2022', 4, true, 22)
 
 /* End Day2 Queries  */
+
+/* Start Day 3 Queries  */
+
+insert into owners (full_name,age) values ('Sam Smith',34)
+insert into owners (full_name,age) values ('Jennifer Orwell',19)
+insert into owners (full_name,age) values ('Bob ',45)
+insert into owners (full_name,age) values ('Dean Winchester',14)
+insert into owners (full_name,age) values ('Jodie Whittaker',38)
+
+/* End Day3 Queries  */
