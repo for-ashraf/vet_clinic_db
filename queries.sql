@@ -35,8 +35,5 @@ select count(*) from animals;
 select count (*) from animals where escape_attempts = 0
 select avg(weight_kg) from animals;
 select name, escape_attempts,neutered from animals order by escape_attempts desc, neutered;
-SELECT MAX(weight_kg), MIN(weight_kg) FROM animals; 
-SELECT avg(escape_attempts) FROM animals where date_of_birth >= '1990-01-01' AND date_of_birth <  '2000-12-31';
-
-
-
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals WHERE  date_of_birth >= '1990/01/01' AND date_of_birth <= '2000/12/31' GROUP BY species 
