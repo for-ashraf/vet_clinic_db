@@ -7,3 +7,5 @@ CREATE TABLE animals (
 	neutered bool,
 	weight_kg DECIMAL
 );
+
+ALTER TABLE animals ADD species VARCHAR (50)
