@@ -29,4 +29,9 @@ insert into owners (full_name,age) values ('Dean Winchester',14)
 insert into species (name) values ('Pokemon')
 insert into species (name) values ('Digimon')
 
+update animals set species_id=2 where name like '%mon';
+update animals set species_id=1 where name not like '%mon';
+
+
+
 /* End Day3 Queries  */
