@@ -18,3 +18,26 @@ insert into animals (id,name,date_of_birth,escape_attempts, neutered, weight_kg)
 insert into animals (id,name,date_of_birth,escape_attempts, neutered, weight_kg) values (11,'Ditto','05-14-2022', 4, true, 22)
 
 /* End Day2 Queries  */
+
+/* Start Day 3 Queries  */
+
+insert into owners (full_name,age) values ('Sam Smith',34)
+insert into owners (full_name,age) values ('Jennifer Orwell',19)
+insert into owners (full_name,age) values ('Bob ',45)
+insert into owners (full_name,age) values ('Dean Winchester',14)
+insert into owners (full_name,age) values ('Melody Pond',77)
+insert into owners (full_name,age) values ('Jodie Whittaker',38)
+
+insert into species (name) values ('Pokemon')
+insert into species (name) values ('Digimon')
+
+update animals set species_id=2 where name like '%mon';
+update animals set species_id=1 where name not like '%mon';
+
+update animals set owner_id=1 where name like 'Agumon';
+update animals set owner_id=2 where name like 'Gabumon' or name like 'Pikachu';
+update animals set owner_id=3 where name like 'Devimon' or name like 'Squirtle';
+update animals set owner_id=6 where name like 'Charmander' or name like 'Squirtle' or name like 'Blossom';
+update animals set owner_id=4 where name like 'Angemon' or name like 'Boarmon';
+
+/* End Day3 Queries  */
