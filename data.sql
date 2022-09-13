@@ -26,6 +26,7 @@ insert into owners (full_name,age) values ('Jennifer Orwell',19)
 insert into owners (full_name,age) values ('Bob ',45)
 insert into owners (full_name,age) values ('Dean Winchester',14)
 insert into owners (full_name,age) values ('Melody Pond',77)
+insert into owners (full_name,age) values ('Jodie Whittaker',38)
 
 insert into species (name) values ('Pokemon')
 insert into species (name) values ('Digimon')

@@ -23,7 +23,8 @@ CREATE TABLE species (
 	name VARCHAR
 );
 
-alter table animals add column species_id INTEGER REFERENCES animals (id)
+ALTER TABLE animals REMOVE species;
+alter table animals add column species_id INTEGER REFERENCES species (id)
 alter table animals add column owner_id INTEGER REFERENCES owners (id)
 
 -- End Day 3 Tasks
