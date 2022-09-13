@@ -42,5 +42,7 @@ SELECT species, AVG(escape_attempts) FROM animals WHERE  date_of_birth >= '1990/
 
 -- Start Day 3 Queries
 select name, owner_id from animals inner join owners on animals.owner_id=owners.id where owners.full_name='Melody Pond';
-select name from animals inner join species on animals.species_id=species.id where species.name='Pokemon';
-select full_name from owners left join animals on owners.id=animals.owners_id;
+select animals."name" from animals join species on animals.species_id=species.id where species.name='Pokemon';
+select owners.full_name, animals.name from owners left join animals on owners.id=animals.owner_id;
+
+SELECT s.name, count(*) FROM species s, animals an WHERE s.id = an.id GROUP BY s.name ORDER BY s.name ASC;
