@@ -40,4 +40,12 @@ update animals set owner_id=3 where name like 'Devimon' or name like 'Squirtle';
 update animals set owner_id=6 where name like 'Charmander' or name like 'Squirtle' or name like 'Blossom';
 update animals set owner_id=4 where name like 'Angemon' or name like 'Boarmon';
 
-/* End Day3 Queries  */
+-- End Day3 Queries --
+
+-- Start Day4 Queries --
+insert into vets (name,age, date_of_graduation) values ('William Tatcher',45, '04-23-2000');
+insert into vets (name,age, date_of_graduation) values ('Maisy Smith',26, '01-17-2019');
+insert into vets (name,age, date_of_graduation) values ('Stephanie Mendez',64, '05-04-1981');
+insert into vets (name,age, date_of_graduation) values ('Jack Harkness',38, '06-08-2008');
+
+-- End Day4 Queries --
