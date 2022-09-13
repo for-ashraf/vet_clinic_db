@@ -45,3 +45,5 @@ select name, owner_id from animals inner join owners on animals.owner_id=owners.
 select animals."name" from animals join species on animals.species_id=species.id where species.name='Pokemon';
 select owners.full_name, animals.name from owners left join animals on owners.id=animals.owner_id;
 SELECT s.name, COUNT(*) FROM animals an INNER JOIN species s ON s.id = an.species_id GROUP BY s."name" ORDER BY COUNT(*) DESC;
+
+SELECT animals.name, owners.full_name, species.name FROM animals JOIN owners ON animals.owner_id = owners.id JOIN species ON animals.species_id=species.id where owners.full_name='Jennifer Orwell' and species.name='Digimon';
