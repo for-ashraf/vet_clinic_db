@@ -40,4 +40,27 @@ update animals set owner_id=3 where name like 'Devimon' or name like 'Squirtle';
 update animals set owner_id=6 where name like 'Charmander' or name like 'Squirtle' or name like 'Blossom';
 update animals set owner_id=4 where name like 'Angemon' or name like 'Boarmon';
 
-/* End Day3 Queries  */
+-- End Day3 Queries --
+
+-- Start Day4 Queries --
+insert into vets (name,age, date_of_graduation) values ('William Tatcher',45, '04-23-2000');
+insert into vets (name,age, date_of_graduation) values ('Maisy Smith',26, '01-17-2019');
+insert into vets (name,age, date_of_graduation) values ('Stephanie Mendez',64, '05-04-1981');
+insert into vets (name,age, date_of_graduation) values ('Jack Harkness',38, '06-08-2008');
+
+INSERT INTO specializations (vets_id,species_id) VALUES (2,1),(4,2),(4,1),(5,2);
+
+INSERT INTO visits (animal_id,vets_id,date) VALUES (1, 2, '2020-05-24'),(1, 4, '2020-07-22');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (3, 6, '2020-02-02');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (7, 3, '2020-01-05'),(7, 3, '2020-03-08'),(7, 3, '2020-05-14');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (2, 4, '2021-05-04');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (8, 5, '2021-02-24');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (4, 3, '2021-12-21'),(4, 2, '2020-08-10'),(4, 3, '2021-04-07');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (9, 4, '2019-09-29');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (5, 5, '2020-10-03'),(5, 5, '2020-11-04');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (6, 3, '2019-01-24'),(6, 3, '2019-05-15'),(6, 3, '2020-02-27'),(6, 3, '2020-08-03');
+INSERT INTO visits (animal_id,vets_id,date) VALUES (10, 4, '2020-05-24'),(10, 2, '2021-01-11');
+
+
+
+-- End Day4 Queries --

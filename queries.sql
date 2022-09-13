@@ -48,3 +48,96 @@ SELECT s.name, COUNT(*) FROM animals an INNER JOIN species s ON s.id = an.specie
 SELECT animals.name, owners.full_name, species.name FROM animals JOIN owners ON animals.owner_id = owners.id JOIN species ON animals.species_id=species.id where owners.full_name='Jennifer Orwell' and species.name='Digimon';
 SELECT animals.name, animals.escape_attempts, owners.full_name from animals JOIN owners ON animals.owner_id = owners.id where owners.full_name='Dean Winchester' and escape_attempts=0;
 SELECT owners.full_name, count(*) from owners inner join animals on owners.id=animals.owner_id group by owners.full_name order by count(*) desc;
+-- End Day 3 Queries
+
+-- Start Day 4 Queries
+SELECT v.date as visit_date, a.name, vt.name from visits v 
+JOIN animals a 
+ON v.animal_id=a.id 
+JOIN vets vt 
+ON v.vets_id=vt.id 
+WHERE vt.name='William Tatcher' 
+ORDER BY visit_date 
+DESC LIMIT 1;
+
+
+SELECT COUNT(a.name) from visits v 
+JOIN animals a 
+ON v.animal_id=a.id 
+JOIN vets vt 
+ON v.vets_id=vt.id 
+WHERE vt.name='Stephanie Mendez';
+
+SELECT species.name 
+AS species_type, vt.name 
+AS vet_name from specializations s 
+JOIN species 
+ON s.species_id=species.id FULL 
+JOIN vets vt 
+ON s.vets_id=vt.id;
+
+SELECT v.date as visit_date, a.name 
+AS animal_name, vt.name as vet_name from visits v 
+JOIN animals a 
+ON v.animal_id=a.id 
+JOIN vets vt
+ON v.vets_id=vt.id 
+WHERE vt.name='Stephanie Mendez' 
+AND v.date 
+BETWEEN '2020-04-01' AND '2020-08-30';
+
+AS count_visits FROM visits v 
+JOIN animals a ON v.animal_id=a.id 
+JOIN vets vt ON v.vets_id=vt.id 
+GROUP BY a.name 
+HAVING COUNT(a.name) = (
+    SELECT MAX(myf.count_visits) 
+    FROM ( select a.name, COUNT(a.name) 
+    AS count_visits from visits v 
+    JOIN animals a ON v.animal_id=a.id 
+    JOIN vets vt ON v.vets_id=vt.id 
+    GROUP BY a.name) 
+    AS myf
+);
+
+SELECT v.date as visit_day, a.name 
+AS animal_name, vt.name AS vet_name 
+FROM visits v JOIN animals a 
+ON v.animal_id=a.id 
+JOIN vets vt 
+ON v.vets_id=vt.id 
+WHERE vt.name='Maisy Smith' 
+ORDER BY v.date 
+LIMIT 1;
+
+SELECT v.date as visit_day, a.name 
+AS animal_name, vt.name 
+AS vet_name 
+FROM visits v 
+JOIN animals a 
+ON v.animal_id=a.id 
+JOIN vets vt
+ON v.vets_id=vt.id 
+ORDER BY v.date 
+DESC LIMIT 1;
+
+SELECT vets.name, s.species_id 
+FROM vets 
+LEFT JOIN specializations s 
+ON s.vets_id=vets.id 
+WHERE species_id IS NULL;
+
+SELECT species.name, COUNT(species.name) 
+AS count_species 
+FROM vets 
+LEFT JOIN specializations s 
+ON s.vets_id=vets.id 
+JOIN animals 
+ON animals.species_id=s.species_id 
+JOIN species 
+ON species.id=s.species_id 
+WHERE vets.name='Maisy Smith' 
+GROUP BY species.name 
+ORDER BY count_species 
+DESC LIMIT 1;
+-- End Day 4 Queries
