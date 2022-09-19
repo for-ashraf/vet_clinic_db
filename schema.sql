@@ -56,5 +56,8 @@ CREATE TABLE visits (
 
 -- Start Database Performance Audit:  Day 1:
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX idx_ànimal_id ON visits(animal_id);
+
 -- End Database Performance Audit:  Day 1:
 
