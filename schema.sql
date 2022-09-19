@@ -54,3 +54,7 @@ CREATE TABLE visits (
   CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
 
+-- Start Database Performance Audit:  Day 1:
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+-- End Database Performance Audit:  Day 1:
+
