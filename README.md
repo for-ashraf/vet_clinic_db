@@ -17,10 +17,19 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
+👤 *Authors*
+Muhammad Ashraf
 
 - GitHub: [@for-ashraf](https://github.com/for-ashraf)
 - LinkedIn: [Muhammad Ashraf](https://www.linkedin.com/in/for-ashraf/)
 - Twitter: [forashraf](https://twitter.com/forashraf)
+
+👤 *Authors*
+Nimrod Acosta
+
+- GitHub: [nimplay](https://github.com/nimplay)
+- Twitter: [NimrodAcosta](https://twitter.com/NimrodAcosta)
+- LinkedIn: [nimrod-acosta](https://www.linkedin.com/in/nimrod-acosta-734330169/)
 
 ## 🤝 Contributing
 

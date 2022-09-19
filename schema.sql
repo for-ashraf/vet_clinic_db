@@ -54,3 +54,16 @@ CREATE TABLE visits (
   CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
 
+-- Start Database Performance Audit:  Day 1:
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX idx_ànimal_id ON visits(animal_id);
+
+CREATE INDEX idx_vets_id ON visits(vets_id);
+
+CREATE INDEX idx_email_owners ON owners(email);
+
+-- End Database Performance Audit:  Day 1:
+
+
+

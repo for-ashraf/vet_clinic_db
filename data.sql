@@ -61,6 +61,14 @@ INSERT INTO visits (animal_id,vets_id,date) VALUES (5, 5, '2020-10-03'),(5, 5, '
 INSERT INTO visits (animal_id,vets_id,date) VALUES (6, 3, '2019-01-24'),(6, 3, '2019-05-15'),(6, 3, '2020-02-27'),(6, 3, '2020-08-03');
 INSERT INTO visits (animal_id,vets_id,date) VALUES (10, 4, '2020-05-24'),(10, 2, '2021-01-11');
 
-
-
 -- End Day4 Queries --
+
+-- Start Database Performance Audit  - Day 1:
+
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+
+-- End Database Performance Audit  - Day 1:
